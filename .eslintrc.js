@@ -14,6 +14,7 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'prettier/prettier': 'error',
+    endOfLine: 'off',
   },
   ignorePatterns: ['03-files-in-folder/secret-folder/**/*.js'],
 };
