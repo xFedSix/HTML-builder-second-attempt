@@ -16,7 +16,7 @@ fs.writeFile(filePath, '', (err) => {
 
 function promptInput() {
   readLine.question('Enter your text: ', (input) => {
-    if (input === 'exit') {
+    if (input.toLowerCase() === 'exit') {
       console.log('Goodbye!');
       readLine.close();
       return;
@@ -29,3 +29,7 @@ function promptInput() {
     });
   });
 }
+readLine.on('SIGINT', () => {
+  console.log('\nGoodbye!');
+  process.exit();
+});
